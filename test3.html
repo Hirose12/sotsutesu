@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let lat,lng;
+
+        getpos();
+        console.log("1" + lat);
+        console.log("1" + lng);
+        testes();
+
+        function getpos(){
+            navigator.geolocation.getCurrentPosition(pos);
+        }
+
+        function pos(position){
+            lat = position.coords.latitude;
+            lng = position.coords.longitude;
+            var text = lat + "," + lng;
+
+            alert(text);
+            console.log("2" + lat);
+            console.log("2" + lng);
+        }
+
+        function testes(){
+            console.log("3" + lat);
+            console.log("3" + lng);
+        }
+
+        console.log("4" + lat);
+        console.log("4" + lng);
+    </script>
+</body>
+</html>
